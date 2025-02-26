@@ -1,0 +1,33 @@
+﻿@page
+@model T4PR1.Pages.FormSimulationModel
+@{
+    Layout = "_Layout";
+}
+<h2>Afegir Simulació</h2>
+<form>
+    <div class="mb-3">
+        <label class="form-label">Tipus de Sistema</label>
+        <select id="tipusSistema" class="form-select" onchange="updateFields()">
+            <option value="Solar">Solar</option>
+            <option value="Eòlic">Eòlic</option>
+            <option value="Hidroelèctric">Hidroelèctric</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label id="paramLabel" class="form-label">Hores de Sol</label>
+        <input type="number" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Rati</label>
+        <input type="number" step="0.01" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Cost per kWh</label>
+        <input type="number" step="0.01" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Preu per kWh</label>
+        <input type="number" step="0.01" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-success">Desar</button>
+</form>
